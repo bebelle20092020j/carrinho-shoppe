@@ -1,20 +1,39 @@
-// quais açoes meu carrrinho pode fazer
-
-//casos de uso
-//adicionar itens no carrinho
-//adicionar item no carrinho
-async function addItem(useCart){
-
+async function addItem(cart, item) {
+  cart.push(item);
 }
 
-//deletar item do carrinho
-async function deleteItem(userCarrinho, name){
-    
+async function displayCart(cart) {
+  console.log("\n🛒 SEU CARRINHO:");
+
+  if (cart.length === 0) {
+    console.log("Carrinho vazio.");
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    console.log(
+      `${index + 1}. ${item.name} | R$ ${item.price.toFixed(2)} | ${item.quantity}x | Subtotal: R$ ${item.subtotal().toFixed(2)}`
+    );
+  });
 }
 
-//remover um item
-async function removeItem(usercart, index) {}
-    
+async function removeItem(cart, index) {
+  if (index < 0 || index >= cart.length) {
+    console.log("❌ Item inválido.");
+    return;
+  }
 
-//calcular o total
-async function calculatetotal(usercart) {}
+  if (cart[index].quantity > 1) {
+    cart[index].quantity -= 1;
+    console.log("➖ Quantidade reduzida.");
+  } else {
+    cart.splice(index, 1);
+    console.log("🗑️ Item removido.");
+  }
+}
+
+async function calculateTotal(cart) {
+  return cart.reduce((total, item) => total + item.subtotal(), 0);
+}
+
+export { addItem, displayCart, removeItem, calculateTotal };
