@@ -51,5 +51,3 @@ O projeto foi criado para representar as principais ações de um carrinho de co
 <a href="https://github.com/bebelle20092020j" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-Isabelle%20Macedo-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Isabelle Macedo">
 </a>
-
-Desenvolvido por [Isabelle Macedo](https://github.com/bebelle20092020j)
