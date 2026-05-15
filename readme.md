@@ -36,14 +36,15 @@ node src/index.js
 
 ```txt
 src/
+  services/
+    cart.js
+    item.js
   index.js
-  cart.js
-  item.js
 ```
 
 ## Sobre o projeto
 
-O projeto foi criado para representar as principais ações de um carrinho de compras. O arquivo `item.js` cria os produtos, o `cart.js` concentra as funções do carrinho e o `index.js` controla a interação com o usuário pelo terminal.
+O projeto foi criado para representar as principais ações de um carrinho de compras. O arquivo `services/item.js` cria os produtos, o `services/cart.js` concentra as funções do carrinho e o `index.js` controla a interação com o usuário pelo terminal.
 
 ## Feito por
 
